@@ -3,9 +3,12 @@
 import Link from "next/link";
 import LogoIcon from "./ui/icons/navIcons/LogoIcon";
 import SearchIcon from "./ui/icons/navIcons/SearchIcon";
+import BasicButton from "./ui/button/BasicButton";
 import { usePathname } from "next/navigation";
+
 const Nav = () => {
   const pathname = usePathname();
+  console.log(pathname);
   const menuItems = ["New", "Categories", "Reviews", "Contact"];
   return (
     <div className="flex items-center mt-6 mb-6">
@@ -26,6 +29,11 @@ const Nav = () => {
             </li>
           </Link>
         ))}
+        <BasicButton
+          className="px-4 py-2 rounded-lg hover:bg-pink-500 hover:text-white transition-colors duration-150"
+          text="Sign in"
+          onClick={() => {}}
+        />
       </ul>
       <Link href={`/search`}>
         <SearchIcon className="cursor-pointer hover:scale-90 duration-150" />
