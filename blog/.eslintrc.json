@@ -15,7 +15,11 @@
       2,
       {
         "allowString": false,
-        "allowNumber": false
+        "allowNumber": false,
+        "allowNullableObject": true,
+        "allowNullableBoolean": true,
+        "allowNullableString": true,
+        "allowNullableNumber": true
       }
     ],
     "no-unused-vars": "error",
