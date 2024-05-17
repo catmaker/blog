@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="font-bold">
       <body className="w-4/5 mx-auto">
-        <header>
+        <header className="sticky top-0 z-100">
           <Nav></Nav>
         </header>
         {children}
