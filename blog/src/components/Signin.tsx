@@ -5,20 +5,23 @@ import BasicButton from "@/components/ui/button/BasicButton";
 type Props = {
   providers: Record<string, ClientSafeProvider>;
   callbackUrl: string;
+  className?: string;
 };
 
-const Signin = ({ providers, callbackUrl }: Props) => {
+const Signin = ({ providers, callbackUrl, className }: Props) => {
+  console.log(providers); // providers 객체의 내용을 콘솔에 출력
+
   return (
     <>
-      {Object.values(providers).map(({ name, id }) => (
+      {Object.values(providers).map((provider) => (
         <BasicButton
-          key={id}
-          text={`Sign in with ${name}`}
-          onClick={() => signIn(id, { callbackUrl })}
+          className={className}
+          key={provider.id}
+          text={`Sign in with ${provider.name}`}
+          onClick={() => signIn(provider.id, { callbackUrl })}
         />
       ))}
     </>
   );
 };
-
 export default Signin;
