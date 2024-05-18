@@ -18,7 +18,7 @@ const SignPage = async ({ searchParams: { callbackUrl } }: Props) => {
   const providers = (await getProviders()) ?? {};
 
   return (
-    <article className="flex items-center p-4 mt-[30%] justify-center ">
+    <article className="flex items-center p-4 mt-24 justify-center ">
       <section className="flex w-[50%] justify-center items-center flex-col gap-4">
         <Signin
           className="hover:bg-pink-500 border p-4 w-full rounded-lg hover:text-white transition-colors duration-150"

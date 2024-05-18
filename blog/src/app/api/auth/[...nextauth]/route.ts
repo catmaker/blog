@@ -1,9 +1,9 @@
-import NextAuth from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
 import KakaoProvider from "next-auth/providers/kakao";
 
-const authOptions = {
+const authOptions: NextAuthOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID || "",
@@ -20,6 +20,19 @@ const authOptions = {
   ],
   pages: {
     signIn: "/auth/signin",
+  },
+  callbacks: {
+    async session({ session }) {
+      console.log(session);
+      const user = session?.user;
+      if (user !== undefined) {
+        session.user = {
+          ...user,
+          username: user.email !== undefined ? user.email.split("@")[0] : "", // username 추가 (email 주소에서 @ 앞부분만 추출
+        };
+      }
+      return session;
+    },
   },
 };
 
