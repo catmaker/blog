@@ -4,36 +4,30 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'Username', //API ID
-      title: 'username', //UI label
+      name: 'username', //API ID
+      title: 'Username', //UI label
       type: 'string',
     },
     {
-      name: 'Name',
-      title: 'name',
+      name: 'name',
+      title: 'Name',
       type: 'string',
     },
     {
-      name: 'Email',
-      title: 'email',
+      name: 'email',
+      title: 'Email',
       type: 'string',
     },
     {
-      name: 'Image',
-      title: 'image',
-      type: 'string',
-    },
-    {
-      name: 'password',
-      title: 'Password',
+      name: 'image',
+      title: 'Image',
       type: 'string',
     },
   ],
   preview: {
     select: {
-      title: 'Username',
-      subtitle: 'Name',
-      media: 'image',
+      title: 'username',
+      subtitle: 'name',
     },
   },
 }
