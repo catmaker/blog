@@ -1,12 +1,12 @@
 import React from "react";
-import Subtitle from "@/components/ui/title/Title";
+import Title from "@/components/ui/title/Title";
 
 const page = () => {
   return (
-    <Subtitle
+    <Title
       title="Contact Us"
       subtitle="Find information to get in touch with us"
-    ></Subtitle>
+    ></Title>
   );
 };
 
