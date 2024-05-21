@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import LogoIcon from "./ui/icons/LogoIcon";
-import SearchIcon from "./ui/icons/SearchIcon";
+import LogoIcon from "@/components/ui/icons/LogoIcon";
+import SearchIcon from "@/components/ui/icons/SearchIcon";
 import BasicButton from "@/components/ui/button/BasicButton";
 import { usePathname } from "next/navigation";
 import { useSession, signIn, signOut } from "next-auth/react";
